@@ -1,0 +1,615 @@
+
+/* Sell Smart - Shared Website Styles */
+
+:root {
+    --bg: #0b1220;
+    --surface: #111c2e;
+    --surface-light: #17243a;
+    --text: #f4f7fc;
+    --muted: #a5b2c7;
+    --blue: #4385ff;
+    --cyan: #5de1d0;
+    --border: #26364c;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.navbar {
+    min-height: 76px;
+    padding: 16px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(11, 18, 32, 0.97);
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 21px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.logo-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--blue), var(--cyan));
+    color: #071321;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+nav,
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+nav a,
+.footer-links a {
+    color: var(--muted);
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+nav a:hover,
+.footer-links a:hover {
+    color: var(--cyan);
+}
+
+.nav-button {
+    background: var(--blue);
+    color: white;
+    padding: 10px 17px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.hero {
+    max-width: 1250px;
+    margin: auto;
+    padding: 100px 7%;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.eyebrow {
+    color: var(--cyan);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 5vw, 67px);
+    line-height: 1.12;
+    letter-spacing: -2px;
+    margin: 22px 0;
+}
+
+.hero h1 span {
+    color: var(--cyan);
+}
+
+.hero-content > p,
+.section-heading > p,
+.cta p {
+    color: var(--muted);
+    max-width: 590px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin: 30px 0 22px;
+}
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    padding: 13px 21px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.primary {
+    background: var(--blue);
+    color: white;
+}
+
+.primary:hover {
+    background: #2868e9;
+}
+
+.secondary {
+    border: 1px solid #42536c;
+    background: var(--surface);
+    color: var(--text);
+}
+
+.trust-note {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.hero-visual {
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 25px;
+    background:
+        radial-gradient(circle at top right, #183d5b, transparent 60%),
+        var(--surface);
+    box-shadow: 0 25px 70px #00000030;
+}
+
+.dashboard {
+    padding: 24px;
+    border-radius: 18px;
+    background: #0d1727;
+    border: 1px solid var(--border);
+}
+
+.dashboard-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.muted {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--cyan);
+}
+
+.dashboard h3 {
+    margin-top: 6px;
+}
+
+.status {
+    font-size: 10px;
+    color: var(--cyan);
+    border: 1px solid #24665f;
+    border-radius: 20px;
+    padding: 5px 9px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 13px;
+}
+
+.stat-card,
+.chart-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 17px;
+}
+
+.stat-card span,
+.stat-card small {
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.stat-card strong {
+    display: block;
+    color: var(--cyan);
+    font-size: 23px;
+    margin: 8px 0;
+}
+
+.chart-card {
+    margin-top: 15px;
+}
+
+.chart-card h4 {
+    font-size: 13px;
+}
+
+.chart-bars {
+    height: 110px;
+    display: flex;
+    align-items: end;
+    justify-content: space-around;
+    gap: 9px;
+    padding-top: 15px;
+    border-bottom: 1px solid var(--border);
+}
+
+.chart-bars span {
+    flex: 1;
+    max-width: 30px;
+    border-radius: 5px 5px 0 0;
+    background: linear-gradient(to top, var(--blue), var(--cyan));
+}
+
+.chart-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.dashboard-footer {
+    margin-top: 18px;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.dashboard-footer span {
+    color: var(--cyan);
+    margin-right: 7px;
+}
+
+.section {
+    padding: 85px 7%;
+}
+
+.features {
+    background: #0e1829;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+.section-heading h2,
+.cta h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.2;
+    margin: 15px 0;
+    letter-spacing: -1px;
+}
+
+.section-heading > p {
+    margin: auto;
+}
+
+.feature-grid {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.feature-card,
+.platform-card {
+    padding: 27px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.feature-card:hover,
+.platform-card:hover {
+    transform: translateY(-4px);
+    border-color: #497ed2;
+}
+
+.feature-icon,
+.platform-icon {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    background: var(--surface-light);
+    border-radius: 13px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3,
+.platform-card h3 {
+    font-size: 18px;
+    margin-bottom: 9px;
+}
+
+.feature-card p,
+.platform-card p {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.platform-grid {
+    max-width: 850px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.platform-card {
+    padding: 35px;
+}
+
+.platform-card p {
+    margin-bottom: 24px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.platform-card small {
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 12px;
+}
+
+.cta {
+    margin: 70px 7%;
+    padding: 65px 25px;
+    text-align: center;
+    border-radius: 22px;
+    background:
+        radial-gradient(circle at top right, #245d79, transparent 60%),
+        #14233b;
+    border: 1px solid var(--border);
+}
+
+.cta p {
+    margin: 0 auto 25px;
+}
+
+.footer {
+    padding: 40px 7%;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.footer .logo {
+    justify-content: center;
+}
+
+.footer > p {
+    margin-top: 13px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.footer-links {
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.copyright {
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    margin-top: 25px !important;
+}
+
+/* Privacy Policy */
+
+.policy-page {
+    max-width: 920px;
+    margin: auto;
+    padding: 55px 25px 85px;
+}
+
+.policy-header {
+    text-align: center;
+    padding: 35px 0 45px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 35px;
+}
+
+.policy-header h1 {
+    font-size: clamp(35px, 5vw, 52px);
+    margin: 12px 0;
+}
+
+.policy-header p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.policy-content {
+    color: #d0d9e7;
+}
+
+.policy-content > p {
+    margin: 17px 0;
+}
+
+.policy-content h2 {
+    font-size: 21px;
+    color: white;
+    margin: 34px 0 10px;
+}
+
+.policy-content ul {
+    padding-left: 25px;
+    margin: 15px 0;
+}
+
+.policy-content li {
+    margin-bottom: 8px;
+}
+
+.policy-content a:not(.button) {
+    color: var(--cyan);
+    overflow-wrap: anywhere;
+}
+
+.policy-content .button {
+    margin-top: 30px;
+}
+
+/* Tablet and mobile */
+
+@media (max-width: 900px) {
+    .navbar {
+        padding: 15px 5%;
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 70px 6%;
+        gap: 40px;
+    }
+
+    .hero-visual {
+        max-width: 600px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .section {
+        padding: 70px 6%;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        gap: 13px;
+    }
+
+    .navbar nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .navbar nav a {
+        font-size: 12px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .nav-button {
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+
+    .hero {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-visual {
+        padding: 12px;
+    }
+
+    .dashboard {
+        padding: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .feature-grid,
+    .platform-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 60px 5%;
+    }
+
+    .feature-card,
+    .platform-card {
+        padding: 23px;
+    }
+
+    .cta {
+        margin: 45px 5%;
+        padding: 45px 20px;
+    }
+
+    .footer-links {
+        gap: 20px;
+    }
+}
+
+
+/* Sell Smart website logo */
+
+.site-logo {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    display: block;
+    border-radius: 8px;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 21px;
+    font-weight: 800;
+    white-space: nowrap;
+}
